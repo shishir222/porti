@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shishir Chalise — Student, Developer & Designer. Terminal-style portfolio." />
+  <title>shishir — portfolio.exe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="window">
+    <header class="titlebar">
+      <span class="title">C:\Users\shishir\portfolio.exe</span>
+      <span class="controls" aria-hidden="true">
+        <span class="ctrl min">&#8211;</span>
+        <span class="ctrl max">&#9633;</span>
+        <span class="ctrl close">&#10005;</span>
+      </span>
+    </header>
+
+    <section class="screen" id="screen">
+      <div id="output"></div>
+
+      <form class="prompt-line" id="prompt-form" autocomplete="off">
+        <label class="prompt" for="cmd">shishir@portfolio:~$</label>
+        <input id="cmd" name="cmd" type="text" spellcheck="false" autocomplete="off" autocapitalize="off" />
+      </form>
+    </section>
+
+    <div class="spider" id="spider" aria-hidden="true">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g class="legs">
+          <g class="leg a" style="transform-origin:56px 40px"><path d="M56 40 Q72 34 84 20" /></g>
+          <g class="leg b" style="transform-origin:44px 40px"><path d="M44 40 Q28 34 16 20" /></g>
+          <g class="leg b" style="transform-origin:57px 47px"><path d="M57 47 Q76 45 90 37" /></g>
+          <g class="leg a" style="transform-origin:43px 47px"><path d="M43 47 Q24 45 10 37" /></g>
+          <g class="leg a" style="transform-origin:57px 54px"><path d="M57 54 Q76 58 88 57" /></g>
+          <g class="leg b" style="transform-origin:43px 54px"><path d="M43 54 Q24 58 12 57" /></g>
+          <g class="leg b" style="transform-origin:56px 61px"><path d="M56 61 Q72 69 82 76" /></g>
+          <g class="leg a" style="transform-origin:44px 61px"><path d="M44 61 Q28 69 18 76" /></g>
+        </g>
+        <g class="body">
+          <ellipse cx="50" cy="62" rx="12" ry="15" />
+          <ellipse cx="50" cy="43" rx="9.5" ry="10.5" />
+          <path class="mark" d="M50 54 L50 72" />
+          <circle class="eye" cx="46.5" cy="36" r="1.6" />
+          <circle class="eye" cx="53.5" cy="36" r="1.6" />
+        </g>
+      </svg>
+    </div>
+
+    <div class="webs" id="webs" aria-hidden="true"></div>
+
+    <template id="web-tpl">
+      <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round">
+          <path d="M20 20 L20 1.5 M20 20 L33.08 6.92 M20 20 L38.5 20 M20 20 L33.08 33.08 M20 20 L20 38.5 M20 20 L6.92 33.08 M20 20 L1.5 20 M20 20 L6.92 6.92" />
+          <polygon points="27,20 24.95,24.95 20,27 15.05,24.95 13,20 15.05,15.05 20,13 24.95,15.05" />
+          <polygon points="33,20 29.19,29.19 20,33 10.81,29.19 7,20 10.81,10.81 20,7 29.19,10.81" />
+          <polygon points="38.5,20 33.08,33.08 20,38.5 6.92,33.08 1.5,20 6.92,6.92 20,1.5 33.08,6.92" />
+        </g>
+      </svg>
+    </template>
+
+    <nav class="menu" id="menu" hidden>
+      <button data-cmd="about">about</button>
+      <button data-cmd="skills">skills</button>
+      <button data-cmd="experience">experience</button>
+      <button data-cmd="education">education</button>
+      <button data-cmd="projects">projects</button>
+      <button data-cmd="contact">contact</button>
+      <button data-cmd="ask" class="accent">ask&#10023;</button>
+      <span class="spacer"></span>
+      <button data-cmd="clear">clear</button>
+      <button data-cmd="replay" class="accent">&#8635; replay</button>
+    </nav>
+  </main>
+
+  <p class="hint">auto-plays on load &nbsp;&middot;&nbsp; just click a command — no typing needed</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
